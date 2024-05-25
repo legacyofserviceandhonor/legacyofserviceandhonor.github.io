@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+  --primary-color: #e0d9cd;
+  --secondary-color: #55564f;
+  --accent-color: #ff4c29;
+  --body-color: #3C3529;
+}
+
+*,*::before,*::after{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body {
+ overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Adamina', serif;
+  font-size: 36px;
+}
+
+h2 {
+ font-family: 'League+Spartan', sans-serif;
+ padding: .8em;
+}
+
+p {
+  font-family: 'league+spartan', sans-serif;
+  font-size: 18;
+  line-height: 1.5;
+}
+
+body {
+   font-family: 'league+spartan', sans-serif;
+ }
+
+.btn {
+  background:var(--accent-color);
+  color:var(--primary-color);
+  cursor: pointer;
+  font-family: 'league+spartan', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: .8em;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background:var(--secondary-color);
+  Color:var(--primary-color)
+}
+
+/* -----Navigation----- */
+.navigation {
+  background: var(--background);
+  text-align: center;
+  Padding: 1em;
+  position: sticky;
+  top:0;
+  z-index: 999;
+}
+
+.navigation .logo {
+ margin-left: 60px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span {
+  color: var(--secondary-color);
+  font-size: 1.5em;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1,0);
+  transition: transform 400ms ease-in-out;
+  transform-origin: top;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #FF4C29;
+}
+
+.nav-toggle:checked ~nav {
+  transform: scale(1,1);
+  background: var(--secondary-color);
+}
+
+.nav-toggle:checked ~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* ------- Hero Section -------> */
+.hero {
+  background-image: url(./Images/warriors_and_quiet_waters.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* align-items: center; */
+  text-align: center;
+  padding-top: 17em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.hero-title {
+  background: url(./Images/hero-title-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+  display: block;
+  color: var(--primary-color);
+}
+
+.hero-title h2 {
+  font-size: 18px;
+  padding-bottom: 1.5em;
+}
+
+.hero img {
+ width: 100%;
+}
+
+
+/* ------- About Campaign Section -------> */
+.section {
+  display: block;
+  padding: 3em;
+  gap: 1em;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-col {
+  flex: 1;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-col {
+  flex: 1;
+}
+
+.right-col h1 {
+  padding-bottom: .5em;
+  padding-top: .5em;
+  font-size: 36px;
+  text-align: center;
+}
+
+.left-col img {
+  width: 100%;
+}
+
+/* <!-- Common Signs Section --> */
+.section-2 {
+  display: block;
+  background-image: url(./Images/Background.jpg);
+  height: 95vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: var(--primary-color);
+}
+
+.section-2 img {
+  width: 100%;
+}
+
+.section-2 h1 {
+  padding-bottom: .5em;
+}
+
+/* <!-- Why don't Veterans seek mental health Section --> */
+ .section-3 {
+  display: block;
+  padding: 3em;
+  gap: 1em;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-col-s3 {
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-col-s3 img {
+  flex: 1;
+  display: block;
+}
+
+.left-col-s3 h1 {
+  padding-bottom: .5em;
+  font-size: 36px;
+  text-align: left;
+  margin-right: 400px;
+}
+
+/* <!-- Recognize the signs section --> */
+ .section-4 {
+  background-image: url(./Images/Background.jpg);
+  height: 210vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:block;
+  color: var(--primary-color);
+  text-align: center;
+  padding-top: 1em;
+  font-weight: bold;
+ }
+ 
+  .header-sect h1{
+  margin-top: 1em;
+ }
+
+ .card-sect {
+  display: block;
+  justify-content: center;
+  color: var(--primary-color);
+ }
+
+ .card h2 {
+  font-size: 30px;
+ }
+
+ .card-1 {
+  margin-top: 2em;
+ }
+ 
+ .card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  gap: 24px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-bottom: 3em;
+ }
+
+ .card img {
+  justify-content: center;
+ }
+
+/* <!-- What can Veterans do to fight against their issues Section --> */
+.section-5 {
+  display: block;
+  padding: 3em;
+  gap: 1em;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-col-s5 {
+  flex: 1;
+  display: block;
+  align-items: center;
+}
+
+.right-col-s5 {
+  flex: 1;
+  margin: 2em;
+}
+
+.right-col-s5 h1 {
+  padding-bottom: .5em;
+  font-size: 36px;
+  text-align: left;
+}
+
+.left-col-s5 img {
+  width: 100%;
+}
+
+/* <!-- How will W&QW programs help me Section --> */
+.section-6 {
+  background-image: url(./Images/Background.jpg);
+  display: block;
+  gap: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-col-s6 {
+  flex: 1;
+  margin: 2em;
+}
+
+.left-col-s6 p {
+ color: var(--primary-color);
+ margin-bottom: 3em;
+}
+
+.left-col-s6 h1 {
+  color: var(--primary-color);
+  padding-top: 1em;
+  padding-bottom: .5em;
+  font-size: 36px;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-col-s6 .btn {
+  margin-top: 2em;
+  display: flex;
+  width: 153px;
+  height: 44px;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* <!-- Testimonial Section --> */
+.section-7 {
+  display: block;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-col-s7 img {
+  width: 100%;
+}
+
+.right-col-s7 {
+  background: var(--secondary-color);
+  color:var(--primary-color);
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.right-col-s7 h1 {
+  padding-bottom: .5em;
+  padding-left: .5em;
+}
+
+.right-col-s7 p {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.right-col-s7 .btn {
+  margin-top: 2em;
+  display: flex;
+  width: 153px;
+  height: 44px;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* <!-- VA SS Hotline Section --> */
+.section-8 {
+  font-size: 12px;
+  background-color: var(--body-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding-right: 4.25em;
+  padding-left: 4.25em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+/* <!-- Footer Section --> */
+footer {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-align:center;
+  padding:30px;
+}
+
+.logo-footer {
+  font-size: 24px;
+  display: block;
+  color: #FFF5E0;
+}
+
+.footer-top {
+  display: block;
+}
+
+.secondary-navigation {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.secondary-navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content:center;
+  padding: 2em;
+}
+
+.secondary-navigation li {
+  list-style-type: none;
+  padding: 2px 10px;
+}
+
+.secondary-navigation a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: .5em;
+  display: flex;
+  left: 300px;
+}
+
+.secondary-navigation ul li a:hover {
+  transition:1s;
+  color:var(--primary-color);
+  background-color: #FF4C29;
+  border-radius:10px;
+ }
+
+ .social-icons {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: .5em;
+  padding: 1em;
+}
+.social-icons a {
+  color: #FF4C29;
+  font-size: 2em;
+}
+
+.social-icons a:hover {
+  color: #FFF5E0;
+}
+ 
+  /* media querries for DESKTOP version                                                                 Media Querries                */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------> */
+@media screen and (min-width:768px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  .hero {
+    height: 90vh;
+    padding: 1em;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  .nav-toggle-label {
+    display: none;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav {
+    all: unset;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+    color: var(--secondary-color);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav li {
+    margin-left:3em;
+    margin-bottom: 0;
+  }
+  
+/* add a line above, below, left, or right of selection or hover */  
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: #FF4C29;
+    position: absolute;
+    bottom: -.75em;
+    left: 0;
+    right: 0;
+    transform:scale(0,1);
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+    transition: transform ease-in-out 350ms;
+    transform-origin: left;
+  } 
+
+  /* ------- Hero Section -------> */
+  
+
+  .hero-title {
+    width: 600px;
+    background: url(./Images/hero-title-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+    margin-right: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+    justify-content: center;
+  }
+
+  /* <!-- About Campaign --> */
+  .section {
+    display: flex;
+    padding: 3em;
+    gap: 1em;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .left-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .right-col {
+    flex: 1;
+    margin: 3em;
+    text-align: left;
+  }
+
+  .left-col img {
+    width: 70%;
+  }
+  
+  /* <!-- Common Signs Section --> */
+  .section-2 {
+    background-image: url(./Images/Background.jpg);
+    height: 75vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: var(--primary-color);
+  }
+  
+  .section-2 img {
+    width: 93vh
+  }
+  
+  .section-2 h1 {
+    padding-bottom: .5em;
+    padding-right: 4em;
+  }
+  
+  .section-2 p {
+    padding-right: 10em;
+  }
+
+  /* <!-- Why don't Veterans seek mental health Section --> */
+  .section-3 {
+    display: flex;
+    padding: 3em 14em;
+    gap: 6em;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right-col-s3 {
+    flex: 2;
+    align-items: center;
+  }
+  
+  .left-col-s3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-col-s3 h1 {
+    padding-bottom: .5em;
+    font-size: 36px;
+    margin-right: 400px;
+  }
+
+  /* <!-- Recognize the signs section --> */
+  .section-4 {
+    height: 90vh;
+    color: var(--primary-color);
+   }
+  
+   .header-sect{
+    display:flex;
+   }
+   
+   .section-4 h1 {
+    justify-content: center;
+    font-size: 36px;
+    margin-left: 3em;
+    margin-top: 3em;
+   }
+  
+   .card-sect {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    padding: 4em;
+   }
+  
+   .card {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-left: 57.5px;
+    margin-right: 57.5px;
+   }
+  
+   .card img {
+    justify-content: center;
+   }
+  /* <!-- Common signs of a struggling Veteran --> */
+  .section-5 {
+    display: flex;
+    padding: 3em;
+    gap: 1em;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-col-s5 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  
+  .right-col-s5 {
+    flex: 1;
+    margin: 4em;
+    margin-right: 160px;
+  }
+  
+  .right-col-s5 h1 {
+    padding-bottom: .5em;
+    font-size: 36px;
+    text-align: left;
+  }
+  
+  .left-col-s5 img {
+    width: 60%;
+  }
+ 
+  /* <!-- How will W&QW programs help me Section --> */
+  .section-6 {
+    background-image: url(./Images/Background.jpg);
+    display: flex;
+    gap: 1em;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-col-s6 {
+    flex: 1;
+    margin: 4em;
+    margin-right: 160px;
+  }
+  
+  .left-col-s6 p {
+   color: var(--primary-color);
+   margin-left: 200px;
+  }
+  
+  .left-col-s6 h1 {
+    color: var(--primary-color);
+    padding-bottom: .5em;
+    font-size: 36px;
+    margin-left: 200px;
+  }
+  
+  .left-col-s6 .btn {
+    display: flex;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+
+  .left-col-s6 .btn:hover {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+  }
+  /* <!-- Testimonial Section --> */
+  .section-7 {
+    display: flex;
+    padding: 3em;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-col-s7 {
+  display: flex;
+  width: 221%;
+  margin-left: 5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .right-col-s7 {
+    margin-right: 5em;
+    background: var(--secondary-color);
+    color:var(--primary-color);
+    padding-top: 3em;
+    padding-bottom: 7.3em;
+  }
+  
+  .right-col-s7 h1 {
+    padding-bottom: .5em;
+    padding-right: 1em;
+    padding-left: .5em;
+  }
+  
+  .right-col-s7 p {
+    padding-left: 1.5em;
+    padding-right: 2em;
+    padding-right: 1.5em;
+  }
+  
+  .right-col-s7 .btn {
+    display: flex;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+
+  .right-col-s7 .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  /* ------- Footer Section -------> */
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-icons {
+    padding: 5em;
+  }
+}
+  
